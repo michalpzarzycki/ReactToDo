@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Input from './Input.module.css'
 
 const Input = () => {
     return(
-        <div>Input</div>
+        <div>
+            <input type="search" />
+        </div>
     )
 }
 
