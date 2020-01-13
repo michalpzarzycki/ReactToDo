@@ -1,12 +1,14 @@
-import React from 'react';
-import Input from './Input.module.css'
+import React, { Fragment } from 'react';
 
 const Input = () => {
     return(
-        <div>
+        <Fragment>
             <input type="search" />
-        </div>
+        </Fragment>
     )
 }
 
 export default Input;
+
+
+
