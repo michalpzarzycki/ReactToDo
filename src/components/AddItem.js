@@ -4,11 +4,12 @@ import Button from './Button'
 import styles from './AddItem.module.css'
 
 
-const AddItem = () => {
+const AddItem = (props) => {
+    const { item, handleChange, handleSubmit } = props;
     return (
         <div className={styles.mainDiv}>
-            <form>
-            <Input />
+            <form onSubmit={handleSubmit}>
+            <Input onChange={handleChange} value={item}/>
             <Button />
             </form>
         </div>

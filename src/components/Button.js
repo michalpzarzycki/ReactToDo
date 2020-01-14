@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const Button = () => {
     return(
-        <div>BUTTON</div>
+        <Fragment>
+            <button type="submit">ADD</button>
+        </Fragment>
     )
 }
 

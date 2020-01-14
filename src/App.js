@@ -10,7 +10,6 @@ const App = () => {
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [value, setValue] = useState("1");
   const [deadline, setDeadline] = useState(new Date());
-  const [color, setColoe] = useState("red");
   
   const handleChange = (e) => {
     console.log("e", e)
@@ -66,7 +65,7 @@ setDeadline(new Date())
   return (
     <div className="App">
       <div className="addSection">
-       <AddItem />
+       <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit}/>
       </div>
       <div className="itemsLists">
        <ItemsList />
