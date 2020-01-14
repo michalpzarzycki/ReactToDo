@@ -1,17 +1,19 @@
 import React from 'react'
 import styles from './Item.module.css'
 
-const Item = () => {
+const Item = (props) => {
+    const { item, date, itemDelete, value, deadline } = props;
+
     return (
 
 
         <div className={styles.mainDiv}>
-            <div className={styles.taskDiv}>ITEM</div>
+            <div className={styles.taskDiv}>{item}</div>
             <div className={styles.datesDiv}>
-                <div>Data dodanie: DATE</div>
-                <div>Deadline:DEADLINE</div>
+                <div>Data dodanie: {date}</div>
+                <div>Deadline:{deadline}</div>
             </div>
-            <div className={styles.rateDiv}>VALUE</div>
+            <div className={styles.rateDiv}>{value}</div>
             <div className={styles.btnsDiv}>
                 <div className={styles.leftBtns}>
                     <button>DELETE</button>

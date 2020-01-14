@@ -68,8 +68,7 @@ setDeadline(new Date())
        <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit}/>
       </div>
       <div className="itemsLists">
-       <ItemsList />
-       <ItemsList />
+       <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete}/>
       </div>
     </div>
   );
