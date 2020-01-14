@@ -10,6 +10,7 @@ const App = () => {
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [value, setValue] = useState("1");
   const [deadline, setDeadline] = useState(new Date());
+  const [done, setDone] = useState(['przykladowe', 'zrobione', 'rzeczy'])
   
   const handleChange = (e) => {
     console.log("e", e)
@@ -62,13 +63,17 @@ setDeadline(new Date())
     const filteredItems = items.filter(item => (item.id !== id))
     setItems(filteredItems)
   }
+  const itemDone = (id) => {
+
+  }
   return (
     <div className="App">
       <div className="addSection">
        <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit}/>
       </div>
       <div className="itemsLists">
-       <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete}/>
+       <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} type="item"/>
+       <ItemsList items={done} deleteAllList={deleteAllList} itemDelete={itemDelete}/>
       </div>
     </div>
   );
