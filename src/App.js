@@ -73,7 +73,7 @@ setDeadline(new Date())
       </div>
       <div className="itemsLists">
        <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} type="item"/>
-       <ItemsList items={done} deleteAllList={deleteAllList} itemDelete={itemDelete}/>
+       <DoneItemsList />
       </div>
     </div>
   );

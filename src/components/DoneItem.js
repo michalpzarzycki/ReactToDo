@@ -1,11 +1,10 @@
-import React from 'react'
-import styles from './DoneItem.module.css'
+import React from 'react';
+import styles from './DoneItem.module.css';
 
 const DoneItem = () => {
+
     return(
-        <div>
-            DoneItem
-        </div>
+        <div>DPNE ITEM</div>
     )
 }
 
