@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ItemsList from './components/ItemsList'
 import AddItem from './components/AddItem'
+import DoneItemsList from './components/DoneItemsList'
 import './App.css';
 
 const App = () => {
@@ -73,7 +74,7 @@ setDeadline(new Date())
       </div>
       <div className="itemsLists">
        <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} type="item"/>
-       <DoneItemsList />
+       <DoneItemsList items={items}/>
       </div>
     </div>
   );

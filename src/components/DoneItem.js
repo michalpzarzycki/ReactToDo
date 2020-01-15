@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './DoneItem.module.css';
 
-const DoneItem = () => {
-
+const DoneItem = (props) => {
+const { title } = props;
     return(
-        <div>DPNE ITEM</div>
+        <div>{ title }</div>
     )
 }
 
