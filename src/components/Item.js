@@ -16,7 +16,7 @@ const Item = (props) => {
             <div className={styles.rateDiv}>{value}</div>
             <div className={styles.btnsDiv}>
                 <div className={styles.leftBtns}>
-                    <button>DELETE</button>
+                    <button onClick={itemDelete}>DELETE</button>
                     <button>EDIT</button>
                 </div>
                 <div className={styles.rightBtns}>
