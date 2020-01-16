@@ -9,7 +9,7 @@ const { items } = props;
         {
             items.map((item, index) => {
                 return (
-                    <DoneItem key={index} title={item.item} />
+                    <DoneItem key={index} title={item} />
                 )
             })
         }

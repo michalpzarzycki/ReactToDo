@@ -7,11 +7,11 @@ import './App.css';
 const App = () => {
   const [item, setItem] = useState("");
   const [items, setItems] = useState([]);
-  const [id, setId] = useState("");
+  const [id, setId] = useState(Math.random());
   const [date, setDate] = useState(new Date().toLocaleDateString());
   const [value, setValue] = useState("1");
   const [deadline, setDeadline] = useState(new Date());
-  const [done, setDone] = useState(['przykladowe', 'zrobione', 'rzeczy'])
+  const [done, setDone] = useState([])
   
   const handleChange = (e) => {
     console.log("e", e)
@@ -30,6 +30,7 @@ const App = () => {
     console.log("DEADLINE W SUBMICIE", deadline)
     e.preventDefault();
     setDate( new Date().toLocaleString())
+    setId(Math.random());
 
     console.log("DEADLINE:w subic", deadline)
 
@@ -65,6 +66,11 @@ setDeadline(new Date())
     setItems(filteredItems)
   }
   const itemDone = (id) => {
+    let filterDone = items.filter(item => (item.id == id));
+    let filteredNotDone = items.filter(item => (item.id !== id));
+    setItems(filteredNotDone);
+    // let newArr = [...done, filterDone.]
+    console.log(filterDone)
 
   }
   return (
@@ -73,8 +79,8 @@ setDeadline(new Date())
        <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit}/>
       </div>
       <div className="itemsLists">
-       <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} type="item"/>
-       <DoneItemsList items={items}/>
+       <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} itemDone={itemDone} type="item"/>
+       <DoneItemsList items={done}/>
       </div>
     </div>
   );

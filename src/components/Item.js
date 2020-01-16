@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Item.module.css'
 
 const Item = (props) => {
-    const { item, date, itemDelete, value, deadline } = props;
+    const { item, date, itemDelete, itemDone, value, deadline } = props;
 
     return (
 
@@ -20,7 +20,7 @@ const Item = (props) => {
                     <button>EDIT</button>
                 </div>
                 <div className={styles.rightBtns}>
-                    <button>DONE</button>
+                    <button onClick={itemDone}>DONE</button>
                 </div>
             </div>
 
