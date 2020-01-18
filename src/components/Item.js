@@ -13,7 +13,7 @@ const Item = (props) => {
                 <div>Data dodanie: {date}</div>
                 <div>Deadline:{deadline}</div>
             </div>
-            <div className={styles.rateDiv}>{value}</div>
+            <div className={styles.rateDiv}>V:{value}</div>
             <div className={styles.btnsDiv}>
                 <div className={styles.leftBtns}>
                     <button onClick={itemDelete}>DELETE</button>

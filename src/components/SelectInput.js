@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './SelectInput.module.css'
 
 const SelectInput = (props) => {
 
-    const {} = props;
+    const { value, handleSelectChange} = props;
 
     return(
         <div>
-            <select value={} onChange={handleSelectChange}>
+            <select value={value} onChange={handleSelectChange}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

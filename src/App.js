@@ -19,7 +19,6 @@ const App = () => {
     setItem(e.target.value)
   }
   const handleSelectChange = (e) => {
-    console.log("e", e)
     setValue(e.target.value)
   }
   const handleDateChange = (date) => {
@@ -79,7 +78,7 @@ setDeadline(new Date())
   return (
     <div className="App">
       <div className="addSection">
-       <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit}/>
+       <AddItem item={item} handleChange={handleChange} handleSubmit={handleSubmit} selectValue={value} handleSelectChange={handleSelectChange}/>
       </div>
       <div className="itemsLists">
        <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} itemDone={itemDone} type="item"/>
