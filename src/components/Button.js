@@ -1,9 +1,10 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
+import styles from './Button.module.css'
 
 const Button = () => {
     return(
         <Fragment>
-            <button type="submit">ADD</button>
+            <button className={styles.mainBtn} type="submit">ADD</button>
         </Fragment>
     )
 }

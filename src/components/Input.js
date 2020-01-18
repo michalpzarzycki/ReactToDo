@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
+import styles from './Input.module.css'
 
 const Input = (props) => {
     const { onChange, value } = props;
     return(
         <Fragment>
-            <input type="search" value={value} onChange={onChange} />
+            <input className={styles.mainInput} type="search" value={value} onChange={onChange} />
         </Fragment>
     )
 }
