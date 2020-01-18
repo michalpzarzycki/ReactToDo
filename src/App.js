@@ -12,6 +12,7 @@ const App = () => {
   const [value, setValue] = useState("1");
   const [deadline, setDeadline] = useState(new Date());
   const [done, setDone] = useState([])
+  const [doneList, setDoneList] = useState([]);
   
   const handleChange = (e) => {
     console.log("e", e)
@@ -66,12 +67,14 @@ setDeadline(new Date())
     setItems(filteredItems)
   }
   const itemDone = (id) => {
-    let filterDone = items.filter(item => (item.id == id));
+    let filteredDone = items.filter(item => (item.id == id));
     let filteredNotDone = items.filter(item => (item.id !== id));
     setItems(filteredNotDone);
-    // let newArr = [...done, filterDone.]
-    console.log(filterDone)
-
+    setDone(filteredDone)
+    console.log(done)
+    const updatedDone = [...doneList, done]
+    setDoneList(updatedDone);
+    console.log("DONE LIST ", doneList)
   }
   return (
     <div className="App">
@@ -80,7 +83,7 @@ setDeadline(new Date())
       </div>
       <div className="itemsLists">
        <ItemsList items={items} deleteAllList={deleteAllList} itemDelete={itemDelete} itemDone={itemDone} type="item"/>
-       <DoneItemsList items={done}/>
+       <DoneItemsList items={doneList}/>
       </div>
     </div>
   );
